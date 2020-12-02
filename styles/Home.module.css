@@ -156,6 +156,12 @@
   color: aliceblue;
 }
 
+@media (max-width: 1000px) {
+  .post {
+    padding: 20px;
+  }
+}
+
 @keyframes post_animation {
   0% {
     transform: translateX(-500px);
