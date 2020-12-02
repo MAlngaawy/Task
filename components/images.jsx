@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import style from '../styles/Images.module.css';
 
 const imagesLinks = [
   'https://images.unsplash.com/photo-1606774714485-cc178f8e6dec?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8eEh4WVRNSExnT2N8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
@@ -9,15 +8,17 @@ const imagesLinks = [
   'https://images.unsplash.com/photo-1606464422927-5acde3e240b2?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ4fHhIeFlUTUhMZ09jfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 ];
 
-function Images() {
+const Images = () => {
   return (
     <>
-      <div className={style.img_page}>
-        <h1>My Imagespage</h1>
+      <div>
+        <h1>Imagespage</h1>
+        <p>Welcome to Imagespage To show the images Lazy loading! </p>
         <div>
           {imagesLinks.map((img, index) => {
             return (
               <>
+                {/* This br elements to show that the image doesn't load until being in the viewport */}
                 <br />
                 <br />
                 <br />
@@ -41,16 +42,14 @@ function Images() {
                   alt="Picture of the author"
                   width="400"
                   height="400"
-                  layout="intrinsic"
                 />
               </>
             );
           })}
         </div>
-        <p>Welcome to my Imagespage!</p>
       </div>
     </>
   );
-}
+};
 
 export default Images;
